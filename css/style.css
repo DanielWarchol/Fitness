@@ -1,0 +1,416 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Header Logo and main-menu */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+header #menu {
+    font-size: 3em;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+header .logo {
+    position: relative;
+    font-size: 2.5em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: green;
+}
+
+/* main-menu */
+.main-menu {
+   padding: 0;
+   font-size: 1.2em;
+}
+
+.main-menu ul li{
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+    position: relative;
+}
+
+.main-menu ul ul {
+    display: none;
+    color: #fff;
+}
+
+.main-menu .menu-item {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.main-menu .menu-item a.active {
+    color: green;
+}
+
+.main-menu .menu-item a.active:hover {
+    color: rgb(185, 185, 185);
+}
+
+.main-menu .menu-item a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 30px;
+    display: block;
+    transition: all .8s;
+}
+
+.main-menu .menu-item a:hover {
+    color: rgb(185, 185, 185);
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: #111;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner:before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: green;
+    transform-origin: top;
+    transform: skewX(-25deg);
+    z-index: 1;
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.banner .textBox h1{
+    color: #fff;
+    font-size: 4em;
+}
+
+ .banner .textBox h2{
+    color: #fff;
+    font-size: 2em;
+} 
+
+.banner .textBox h2:hover {
+    color: green;
+    transition: .6s;
+}
+
+.banner .textBox a {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    color: #111;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.banner .textBox a:hover {
+    background-color: green;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.banner .textBox {
+    position: relative;
+    max-width: 600px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.banner .imgBox {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    z-index: 2;
+}
+
+.banner .imgBox img {
+    position: absolute;
+    bottom: 0;
+    left: 250px;
+    width: 90%;
+    height: 90%;
+    z-index: 10000;
+}
+
+.link {
+    position: absolute;
+    bottom: 20px;
+    letter-spacing: 100px;
+    display: flex;
+    justify-content: center;
+}
+.link li {
+    list-style: none;
+}
+
+.link li a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.link li a img {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.5);
+    filter: invert(1);
+}
+
+
+/* Container  */
+
+.container {
+    background: #111;
+    width: 100%;
+    height: 100vh;
+}
+
+.container h1 {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.container h1:hover {
+    color: green;
+    transition: .6s;
+    cursor: pointer;
+}
+
+/* Card Container */
+
+.pricing-table{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.col{
+    flex: 25%;
+    padding: 10px;
+    max-width: 320px;
+    box-sizing: border-box;
+}
+
+.table {
+    background: #222;
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 150px;
+    padding: 150px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.table:hover {
+    color: green;
+    box-shadow: 0px 0px 30px green;
+    transition: .5s;
+}
+
+.table h2 {
+    text-transform: uppercase;
+}
+
+.table ul {
+    padding: 10px 0;
+    list-style: none;
+}
+
+.price {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.price span {
+    display: block;
+    font-size: 15px;
+}
+
+.table a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid green;
+    display: block;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 40px;
+    font-size: 14px;
+    transition: 0.5s linear;
+}
+
+.table a:hover {
+    background: green;
+    color: black;
+}
+
+.prom {
+    background: red;
+    color: #fff;
+    transform: rotate(45deg);
+    padding: 5px 60px;
+    position: absolute;
+    top: 20px;
+    right: -40px;
+}
+
+/* About */
+
+.container-2 {
+    background: #111;
+    width: 100%;
+    height: 130vh;
+}
+
+.container-2 p {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.container-2 p:hover {
+    color: green;
+    transition: .6s;
+    cursor: pointer;
+}
+/* Character */
+.character {
+    background-color: green;
+    width: 100%;
+    height: 400px;
+    margin-top: 100px;
+}
+
+.character img {
+    width: 200px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 20px;
+    opacity: 1;
+}
+
+.character  h1 {
+    color: #fff;
+    margin-left: 250px;
+    margin-top: -250px;
+}
+
+.character center{
+    font-size: 25px;
+    margin: -10px auto;
+    line-height: 1.5;
+    max-width: 1000px;
+    color: #fff;
+}
+
+/* Character2 */
+.character2 {
+    background-color: green;
+    width: 100%;
+    height: 400px;
+    margin-top: 100px;
+}
+
+.character2 img {
+    width: 200px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 20px;
+    opacity: 1;
+}
+
+.character2  h1 {
+    color: #fff;
+    margin-left: 250px;
+    margin-top: -250px;
+}
+
+.character2 center{
+    font-size: 25px;
+    margin: -10px auto;
+    line-height: 1.5;
+    max-width: 1000px;
+    color: #fff;
+}
+
+ .container-3 {
+    background-color: #111;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container-3 p {
+    font-size: 32px;
+    color: #fff;
+    padding: 10px;
+    margin-top: -100px;
+    text-align: center;
+}
+
+.container-3 p:hover {
+    color: green;
+    transition: .6s;
+    cursor: pointer;
+    display: block;
+}
+
+.image {
+    background-color: #fff;
+    width: 500px;
+    height: 500px;
+}
